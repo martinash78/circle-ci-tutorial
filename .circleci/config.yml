@@ -53,8 +53,9 @@ orbs:
           - image: cimg/node:16.16.0
         environment:
           USER: circleci
-    commands:
+    jobs:
       list-directory:
+        executor: node
         steps:
           - run:
               command: |
