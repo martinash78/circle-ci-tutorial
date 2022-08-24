@@ -55,5 +55,7 @@ orbs:
           USER: circleci
     commands:
       list-directory:
-        command: |
-          node -v
+        steps:
+          - run:
+              command: |
+                node -v
