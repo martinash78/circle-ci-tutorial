@@ -43,7 +43,7 @@ workflows:
       - deployment-orb/list-directory:
           name: List Directory
       - deployment-orb/list-directory:
-          name: Go to Home
+          name: Go Home
 
 orbs:
   deployment-orb:
@@ -55,10 +55,17 @@ orbs:
           - image: cimg/node:16.16.0
         environment:
           USER: circleci
-    commands:
+    jobs:
       list-directory:
-        command: |
-          node -v
+        executor: node
+        steps:
+          - run:
+              command: |
+                node -v
       go-to-home:
-        command: |
-          node -v
+        executor: node
+        steps:
+          - run:
+              command: |
+                cd
+                
