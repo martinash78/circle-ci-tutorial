@@ -42,8 +42,12 @@ workflows:
             - Fetch-Code
       - deployment-orb/list-directory:
           name: List Directory
+          requires:
+            - Using-Node
       - deployment-orb/go-to-home:
           name: Go Home
+          requires:
+            - Using-Node
 
 orbs:
   deployment-orb:
