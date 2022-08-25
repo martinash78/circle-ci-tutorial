@@ -42,7 +42,7 @@ workflows:
             - Fetch-Code
       - deployment-orb/list-directory:
           name: List Directory
-      - deployment-orb/list-directory:
+      - deployment-orb/go-to-home:
           name: Go Home
 
 orbs:
