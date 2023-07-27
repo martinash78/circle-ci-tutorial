@@ -10,15 +10,8 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
-            echo "my artifact file" > /tmp/artifact-1;
-            mkdir /tmp/downloads;
-            echo "my artifact files in a dir" > /tmp/artifacts/artifact-2;
             npm run download
-
-      - store_artifacts:
-          path: /tmp/artifact-1
-          destination: artifact-file
-
+            
       - store_artifacts:
           path: /tmp/downloads
 
