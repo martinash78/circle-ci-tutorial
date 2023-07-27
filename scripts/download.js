@@ -63,7 +63,7 @@ const companyId = response.companyId;
 const challengeId = response.challenge.id;
 
 const writer = csvWriter.createObjectCsvWriter({
-	path: path.resolve(__dirname, `corporate-challenge-leaderboard-${companyId}-${challengeId}.csv`),
+	path: path.resolve('/tmp/downloads/', `corporate-challenge-leaderboard-${companyId}-${challengeId}.csv`),
 	header: [
 		{ id: "name", title: "Name" },
 		{ id: "score", title: "Score" },
