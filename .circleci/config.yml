@@ -3,7 +3,7 @@ jobs:
   # running commands on a basic image
   Hello-World:
     docker:
-      - image: cimg/base:2021.04
+      - image: cimg/node:18.16.0
     steps:
       - run:
           name: Saying Hello
@@ -11,7 +11,7 @@ jobs:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
             npm run download
-            
+
       - store_artifacts:
           path: /tmp/downloads
 
