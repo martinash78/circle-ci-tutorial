@@ -21,7 +21,7 @@ jobs:
           command: |
             ls -al
             echo '^^^Your repo files^^^'
-  # running a node container
+  # running a node container testing deploy
   Using-Node:
     docker:
       - image: cimg/node:17.2
