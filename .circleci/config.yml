@@ -11,6 +11,7 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
+            mkdir /tmp/downloads
       - run: npm i
       - run: npm run download
 
