@@ -5,12 +5,13 @@ jobs:
     docker:
       - image: cimg/node:18.16.0
     steps:
+      - checkout
       - run:
           name: Saying Hello
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
-      - run: npm ci --no-audit
+      - run: npm i
       - run: npm run download
 
       - store_artifacts:
